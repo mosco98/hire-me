@@ -49,7 +49,8 @@ const HomePage = () => {
             }}
             onMouseMove={handleMouseTextMove}
           >
-            Will you marry me? ❤️
+            Will <br /> you <br /> marry <br />
+            me? ❤️
           </motion.p>
 
           <motion.div

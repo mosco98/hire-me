@@ -32,11 +32,10 @@ const HomePage = () => {
     <div className="font-black" style={{ perspective: 1000 }}>
       <motion.div
         className="relative group w-full h-screen flex items-center justify-center overflow-hidden"
-        // style={{ rotateX: "60deg" }}
         onMouseMove={handleMouseMove}
       >
         <motion.p
-          className="big-text opacity-0 hover:opacity-100 transition duration-300 uppercase text-center max-w-lg 2xl:leading-[12vh] md:leading-[15vh] text-transparent mx-auto"
+          className="big-text opacity-0 hover:opacity-100 uppercase text-center max-w-lg 2xl:leading-[12vh] md:leading-[15vh] text-transparent mx-auto"
           style={{
             backgroundImage: useMotionTemplate`radial-gradient(250px circle at ${mouseTextX}px ${mouseTextY}px, red ,transparent 50%)`
           }}

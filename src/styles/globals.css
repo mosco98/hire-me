@@ -29,6 +29,7 @@ body {
   font-size: 8vw;
   position: relative;
   background-clip: text;
+  z-index: 100;
 
   &::before {
     content: "";

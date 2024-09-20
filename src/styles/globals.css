@@ -34,8 +34,8 @@ body {
   &::before {
     content: "";
     position: absolute;
-    width: 120%;
-    height: 120%;
+    width: 150%;
+    height: 150%;
     background: transparent;
     left: 50%;
     top: 50%;

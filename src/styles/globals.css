@@ -26,22 +26,18 @@ body {
 }
 
 .big-text {
-  /* text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8); */
   font-size: 8vw;
-  /* -webkit-text-stroke: 1px #292929; */
-  /* color: var(--background); */
-  /* color: transparent; */
-  /* backdrop-filter: blur() brightness(9.5) saturate(11.5); */
-  /* mask: linear-gradient(#000 0 0) border-box text; */
-  /* mix-blend-mode: color-burn; */
   position: relative;
   background-clip: text;
-}
 
-/* .glow {
-  background: radial-gradient(
-    circle at 50% 50%,
-    rgba(36, 36, 36, 0.9),
-    transparent 80%
-  );
-} */
+  &::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: transparent;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+  }
+}

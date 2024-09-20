@@ -35,7 +35,7 @@ const HomePage = () => {
         onMouseMove={handleMouseMove}
       >
         <motion.p
-          className="big-text opacity-0 hover:opacity-100 uppercase text-center max-w-lg 2xl:leading-[12vh] md:leading-[15vh] text-transparent mx-auto"
+          className="big-text opacity-0 hover:opacity-100 uppercase text-center max-w-lg 2xl:leading-[12vh] md:leading-[15vh] text-transparent mx-auto relative"
           style={{
             backgroundImage: useMotionTemplate`radial-gradient(200px circle at ${mouseTextX}px ${mouseTextY}px, red ,transparent 50%)`
           }}

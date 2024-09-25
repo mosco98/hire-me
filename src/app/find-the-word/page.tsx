@@ -11,12 +11,12 @@ import {
 import { FormEvent, MouseEvent, useEffect, useRef, useState } from "react";
 
 const FindTheWordPage = () => {
-  const [currentLevel, setCurrentLevel] = useState<1 | 2 | 3>(1);
+  // const [currentLevel, setCurrentLevel] = useState<1 | 2 | 3>(1);
 
   const [foundWords, setFoundWords] = useState<string[]>(
     new Array(15).fill("")
   );
-  const [bonusWords, setBonusWords] = useState([]);
+  // const [bonusWords, setBonusWords] = useState([]);
 
   const [currentWord, setCurrentWord] = useState<
     { word: string; shuffledWord: string } | undefined

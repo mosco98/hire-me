@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { motion } from "framer-motion";
@@ -12,7 +13,7 @@ const CarouselItem = ({ i, innerAngle }: CarouselItemProps) => {
     <motion.div
       className="rounded-lg overflow-hidden flex-shrink-0 absolute inset-[2px] left-1/2 top-1/2 border border-[#292929]/10"
       style={{
-        backfaceVisibility: "hidden",
+        // backfaceVisibility: "hidden",
         transform: `
     translate(-50%, -50%)
     rotateY(${innerAngle * i}deg)

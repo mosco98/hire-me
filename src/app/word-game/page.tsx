@@ -1,7 +1,10 @@
+// @typescript-eslint/no-unused-vars
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 "use client";
 
-import { motion, useAnimation } from "framer-motion";
-import { MouseEvent, useRef, useState } from "react";
+import { motion } from "framer-motion";
+import { useRef, useState } from "react";
 import { v4 } from "uuid";
 
 interface LetterType {
@@ -39,81 +42,81 @@ const DEFAULT = [
 ];
 
 const WordGamePage = () => {
-  const [word, setWord] = useState<LetterType[]>(DEFAULT);
-  const [answer, setAnswer] = useState<LetterType[]>([]);
-  const [nextTile, setNextTile] = useState(0);
+  const [word, _setWord] = useState<LetterType[]>(DEFAULT);
+  const [answer, _setAnswer] = useState<LetterType[]>([]);
+  const [nextTile, _setNextTile] = useState(0);
 
   const nextTileRef = useRef<HTMLDivElement>(null);
 
-  const controlsArray = word.map((w) => {
-    return {
-      id: w.id,
-      controls: useAnimation()
-    };
-  });
+  // const controlsArray = word.map((w) => {
+  //   return {
+  //     id: w.id,
+  //     controls: useAnimation()
+  //   };
+  // });
 
-  const handleGetNextTileBounds = async (
-    { currentTarget }: MouseEvent,
-    letter: LetterType
-  ) => {
-    const animation = controlsArray.find((c) => c.id === letter.id);
+  // const handleGetNextTileBounds = async (
+  //   { currentTarget }: MouseEvent,
+  //   letter: LetterType
+  // ) => {
+  //   const animation = controlsArray.find((c) => c.id === letter.id);
 
-    if (!animation) return;
+  //   if (!animation) return;
 
-    if (letter.x && letter.y) {
-      await animation.controls.start({
-        x: 0,
-        y: 0,
-        transition: {
-          type: "spring",
-          bounce: 0.15,
-          duration: 0.4
-        }
-      });
+  //   if (letter.x && letter.y) {
+  //     await animation.controls.start({
+  //       x: 0,
+  //       y: 0,
+  //       transition: {
+  //         type: "spring",
+  //         bounce: 0.15,
+  //         duration: 0.4
+  //       }
+  //     });
 
-      delete letter.x;
+  //     delete letter.x;
 
-      const newAnswer = answer.filter((l) => l.id !== letter.id);
-      setAnswer(newAnswer);
-      setWord((prev) => [...prev, letter]);
+  //     const newAnswer = answer.filter((l) => l.id !== letter.id);
+  //     setAnswer(newAnswer);
+  //     setWord((prev) => [...prev, letter]);
 
-      return;
-    }
+  //     return;
+  //   }
 
-    if (nextTileRef.current) {
-      animation.controls.stop();
+  //   if (nextTileRef.current) {
+  //     animation.controls.stop();
 
-      const { left: clientLeft, bottom: clientBottom } =
-        currentTarget.getBoundingClientRect();
+  //     const { left: clientLeft, bottom: clientBottom } =
+  //       currentTarget.getBoundingClientRect();
 
-      const { left, bottom } = nextTileRef.current.getBoundingClientRect();
+  //     const { left, bottom } = nextTileRef.current.getBoundingClientRect();
 
-      const x = left - clientLeft;
-      const y = bottom - clientBottom;
+  //     const x = left - clientLeft;
+  //     const y = bottom - clientBottom;
 
-      await animation.controls.start({
-        x,
-        y,
-        transition: {
-          type: "spring",
-          bounce: 0.15,
-          duration: 0.4
-        }
-      });
+  //     await animation.controls.start({
+  //       x,
+  //       y,
+  //       transition: {
+  //         type: "spring",
+  //         bounce: 0.15,
+  //         duration: 0.4
+  //       }
+  //     });
 
-      letter.x = x;
-      letter.y = y;
+  //     letter.x = x;
+  //     letter.y = y;
 
-      setAnswer((prev) => [...prev, letter]);
-      setNextTile((prev) => prev + 1);
-    }
-  };
+  //     setAnswer((prev) => [...prev, letter]);
+  //     setNextTile((prev) => prev + 1);
+  //   }
+  // };
 
   return (
     <div className="h-screen grid place-content-center">
       <div className="">
         <div className="mb-4 2xl:mb-6 text-center text:xl md:text-2xl 2xl:text-3xl h-5 flex items-center justify-center gap-1">
-          {answer.map((a, i) => (
+          {answer.map((a) => (
             <motion.span
               layout
               key={a.id}
@@ -145,8 +148,8 @@ const WordGamePage = () => {
             >
               <motion.div
                 className="absolute w-12 md:w-16 2xl:w-20 aspect-square bg-[#f5f5f5] text-black text-lg md:text-xl 2xl:text-2xl font-semibold flex items-center justify-center cursor-pointer"
-                animate={controlsArray.find((c) => c.id === w.id)?.controls}
-                onClick={(e) => handleGetNextTileBounds(e, w)}
+                // animate={controlsArray.find((c) => c.id === w.id)?.controls}
+                // onClick={(e) => handleGetNextTileBounds(e, w)}
               >
                 {w.letter}
               </motion.div>

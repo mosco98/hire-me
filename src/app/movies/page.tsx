@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import Carousel from "./Carousel";
 
 const MoviesPage = async () => {

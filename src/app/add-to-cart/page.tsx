@@ -5,7 +5,7 @@ import { useRef } from "react";
 import useMeasure from "react-use-measure";
 
 const AddToCartPage = () => {
-  const [ref, bounds] = useMeasure();
+  const [ref] = useMeasure();
   const cartRef = useRef<HTMLButtonElement>(null);
 
   const controls = useAnimation();

@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
@@ -40,5 +40,64 @@ body {
     left: 50%;
     top: 50%;
     translate: -50% -50%;
+    z-index: 100;
+  }
+}
+
+.hidden-text {
+  position: relative;
+  font-size: 7vw;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background: transparent;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+  }
+}
+
+.loading-text {
+  background-clip: text;
+  color: rgba(255, 255, 255, 0.15);
+  background-image: linear-gradient(to right, white 100%, transparent 0%);
+  background-size: 10px 100%;
+  background-repeat: no-repeat;
+  animation: loading 1.8s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: -20%;
+  }
+
+  100% {
+    background-position: 130%;
+  }
+}
+
+.carousel-container {
+  mask: radial-gradient(800px circle at center, black, transparent 100%);
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    translate: -50% -70%;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 1),
+        transparent 50%
+      )
+      fixed;
+    filter: brightness(0.5) blur(20px);
+    transform: translateZ(10px);
+    mix-blend-mode: lighten;
   }
 }

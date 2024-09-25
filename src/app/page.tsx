@@ -45,7 +45,7 @@ const HomePage = () => {
           <motion.p
             className="big-text opacity-0 hover:opacity-100 uppercase text-center max-w-[35%] 2xl:leading-[16vh] md:leading-[15vh] text-transparent mx-auto relative select-none"
             style={{
-              backgroundImage: useMotionTemplate`radial-gradient(200px circle at ${mouseTextX}px ${mouseTextY}px, red ,transparent 60%)`
+              backgroundImage: useMotionTemplate`radial-gradient(200px circle at ${mouseTextX}px ${mouseTextY}px, red,transparent 60%)`
             }}
             onMouseMove={handleMouseTextMove}
           >
@@ -54,9 +54,10 @@ const HomePage = () => {
           </motion.p>
 
           <motion.div
-            className="absolute -inset-px glow pointer-events-none opacity-0 group-hover:opacity-100 transition duration-300 blur-lg"
+            className="absolute inset-0 glow pointer-events-none opacity-0 group-hover:opacity-100 transition duration-300 blur-xl"
             style={{
-              background: useMotionTemplate`radial-gradient(200px circle at ${mouseX}px ${mouseY}px,rgba(36, 36, 36, 0.8),transparent 55%)`
+              background: useMotionTemplate`radial-gradient(200px circle at ${mouseX}px ${mouseY}px,rgba(36, 36, 36, 0.8),transparent 55%)`,
+              boxShadow: "0 25px 50px -12px rgb(0 0 0 / 0.25)"
             }}
           ></motion.div>
         </motion.div>

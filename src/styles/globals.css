@@ -101,3 +101,65 @@ body {
     mix-blend-mode: lighten;
   }
 }
+
+.carousel-parallax {
+  --item-size: 9vw;
+  padding-inline: calc(50% - var(--item-size) * 0.5);
+  scroll-padding-inline: calc(50% - var(--item-size) * 0.5);
+  /* scroll-snap-type: x mandatory;
+  scroll-behavior: smooth; */
+
+  .carousel-parallax-item {
+    position: relative;
+    perspective: 700px !important;
+    transform-style: preserve-3d;
+    width: var(--item-size);
+    pointer-events: none;
+    /* transform: scale(0.8); */
+
+    view-timeline: --item-timeline inline;
+
+    animation: parallax both linear;
+    animation-timeline: --item-timeline;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: inherit;
+      width: 100%;
+      height: 100%;
+      top: 115%;
+      left: 50%;
+      background-repeat: inherit;
+      background-size: inherit;
+      background-position: inherit;
+      transform: rotateX(0deg) scaleY(-1) translateZ(0px) translateX(-50%);
+      transform-origin: center;
+      mask-image: linear-gradient(
+        to top,
+        rgb(10, 10, 10, 0.9),
+        transparent 35%
+      );
+      /* box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); */
+
+      filter: blur(1.2px) brightness(1) saturate(1.5);
+      @apply rounded-lg;
+      /* opacity: 0; */
+
+      /* animation: parallax-reflection both linear;
+      animation-timeline: --item-timeline; */
+    }
+  }
+}
+
+@keyframes parallax {
+  100% {
+    background-position-x: 100%;
+  }
+}
+
+/* @keyframes parallax-reflection {
+  100% {
+    opacity: 1;
+  }
+} */

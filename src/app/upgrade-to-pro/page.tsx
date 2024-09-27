@@ -9,16 +9,18 @@ const UpgradeToProPage = () => {
   return (
     <div className="h-screen grid place-items-center bg-black">
       <div className="relative">
-        <div className="bg-[#0a0a0a] border border-[#ffffff24] bg-clip-border rounded-[8px] py-2 px-3 relative z-50 text-[#ededed] flex items-center justify-between gap-2.5">
+        <div className="bg-[#0a0a0a] border border-[#ffffff24] bg-clip-border rounded-[8px] px-3 relative z-50 text-[#ededed] flex items-center justify-between gap-2.5">
           <p className="text-sm relative z-50">
             <button
-              className="inline-flex items-center justify-center text-[#a1a1a1] relative z-50 pointer-events-auto group hover:text-inherit transition duration-100 ease-linear"
+              className="inline-flex items-center justify-center text-[#a1a1a1] relative z-50 pointer-events-auto group hover:text-inherit transition duration-100 ease-linear h-9"
               onMouseOver={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
-              <span className="relative z-50">Upgrade to Pro</span>
+              <span className="relative z-50 block">
+                <span>Upgrade to Pro</span>
 
-              <span className="absolute w-full h-[0.25px] bg-[#a1a1a1] group-hover:bg-white top-full opacity-80 transition duration-100 ease-linear"></span>
+                <span className="absolute w-full left-0 h-[0.25px] bg-[#a1a1a1] group-hover:bg-white top-full opacity-80 transition duration-100 ease-linear"></span>
+              </span>
             </button>
             {"  "}
             <span className="-z-10">for 2x more CPUs and faster builds</span>

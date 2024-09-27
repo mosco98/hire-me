@@ -43,12 +43,12 @@ const UpgradeToProPage = () => {
           initial={
             !isHovered
               ? { y: -28, x: -50, scale: 0.5 }
-              : { y: -9.5, x: -5, rotate: 360, scale: 1 }
+              : { y: -9.5, x: -5, rotate: -360, scale: 1 }
           }
           animate={
             !isHovered
               ? { y: -28, x: -50, scale: 0.5 }
-              : { y: -9.5, x: -5, rotate: 360, scale: 1 }
+              : { y: -9.5, x: -5, rotate: -360, scale: 1 }
           }
           transition={{ duration: 1, bounce: 0.3, type: "spring" }}
         >
@@ -65,12 +65,19 @@ const UpgradeToProPage = () => {
         <motion.span
           className="absolute bottom-full -left-1.5"
           initial={
-            !isHovered ? { y: 30, x: 60 } : { y: 10.5, x: 0, rotate: -360 }
+            !isHovered ? { y: 30, x: 60 } : { y: 10.5, x: 0, rotate: 360 }
           }
           animate={
-            !isHovered ? { y: 30, x: 60 } : { y: 10.5, x: 0, rotate: -360 }
+            !isHovered ? { y: 30, x: 60 } : { y: 10.5, x: 0, rotate: 360 }
           }
-          transition={{ duration: 1, bounce: 0.3, type: "spring" }}
+          transition={{
+            duration: 1,
+            bounce: 0.3,
+            type: "spring",
+            rotate: {
+              delay: 0.15
+            }
+          }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

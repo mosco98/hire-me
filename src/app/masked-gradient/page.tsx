@@ -9,7 +9,6 @@ const MaskedGradientPage = () => {
         whileTap={{ scale: 0.9 }}
         className="w-[16vw] aspect-[2/2.5] relative z-50"
         style={{
-          // rotate: 6,
           filter: "drop-shadow(0px 4px 4px rgba(0, 241, 111, 0.05))"
         }}
       >
@@ -67,17 +66,6 @@ const MaskedGradientPage = () => {
             ease: "linear"
           }}
         ></motion.div>
-
-        {/* <div
-          className="absolute -inset-2 rounded-sm overflow-hidden"
-          style={{
-            clipPath:
-              "polygon(30% 0%,80% 0%,100% 24%,100% 100%,67% 100%,30% 100%,0% 100%,0% 0%)",
-            // background: "rgba(0, 241, 111, 0.05)"
-            background:
-              "conic-gradient(#008B40, #494949, , rgba(0, 241, 111, 0.05), #3F3F3F, #008B40)"
-          }}
-        ></div> */}
       </motion.div>
     </div>
   );

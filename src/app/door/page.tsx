@@ -46,7 +46,7 @@ const DoorPage = () => {
             <button className="h-12 px-4 md:px-6 bg-[#A1662F] hover:bg-[#975e29] text-white rounded-md transition-all duration-100 ease-linear">
               Get started
             </button>
-            <button className="h-12 px-4 md:px-6 text-white hover:text-[#93683f] transition-all duration-100 ease-linear text-lg inline-flex items-center justify-center gap-2 group">
+            <button className="h-12 px-4 md:px-6 text-white hover:text-[#A1662F] transition-all duration-100 ease-linear text-lg inline-flex items-center justify-center gap-2 group">
               Explore opportunities{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -65,10 +65,10 @@ const DoorPage = () => {
           style={{
             perspective: 1000
           }}
-          animate={{
-            x: [0, -1.5, 1.5, -1.5, 1.5, -1.5, 1.5, -1.5, 0.5, -0.25, 0.25, 0],
-            y: [0, -1.5, 1.5, -1.5, 1.5, -1.5, 1.5, -1.5, 0.5, -0.25, 0.25, 0]
-          }}
+          // animate={{
+          //   x: [0, -1.5, 1.5, -1.5, 1.5, -1.5, 1.5, -1.5, 0.5, -0.25, 0.25, 0],
+          //   y: [0, -1.5, 1.5, -1.5, 1.5, -1.5, 1.5, -1.5, 0.5, -0.25, 0.25, 0]
+          // }}
         >
           <motion.div
             className="inset-0 bg-[#A1662F] absolute flex items-center justify-end p-4 z-50 border-t-[2px] border-r-[2px] border-b-[2px] border-white rounded-r-sm"
@@ -79,10 +79,10 @@ const DoorPage = () => {
             initial={{ rotateY: 0 }}
             animate={{ rotateY: -110 }}
             transition={{
-              duration: 7,
+              duration: 10,
               type: "spring",
               delay: 1,
-              bounce: 0.5,
+              bounce: 0.6,
               velocity: 10
             }}
           >
@@ -94,7 +94,7 @@ const DoorPage = () => {
             style={{ translateZ: -1200, y: -80 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeInOut", delay: 2 }}
+            transition={{ duration: 0.5, ease: "easeInOut", delay: 2.2 }}
           >
             <div className="absolute left-1/2 -translate-x-1/2 top-0 flex flex-col items-center">
               <div className="w-[2px] h-20 bg-black z-20"></div>
@@ -109,7 +109,7 @@ const DoorPage = () => {
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeInOut", delay: 2.05 }}
+            transition={{ duration: 0.5, ease: "easeInOut", delay: 2.25 }}
           ></motion.div>
 
           <motion.div
@@ -119,7 +119,7 @@ const DoorPage = () => {
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeInOut", delay: 2.05 }}
+            transition={{ duration: 0.5, ease: "easeInOut", delay: 2.25 }}
           ></motion.div>
         </motion.div>
       </section>

@@ -79,7 +79,7 @@ const DoorPage = () => {
             initial={{ rotateY: 0 }}
             animate={{ rotateY: -110 }}
             transition={{
-              duration: 2.5,
+              duration: 7,
               type: "spring",
               delay: 1,
               bounce: 0.5,
@@ -94,7 +94,7 @@ const DoorPage = () => {
             style={{ translateZ: -1200, y: -80 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeInOut", delay: 1.6 }}
+            transition={{ duration: 0.5, ease: "easeInOut", delay: 2 }}
           >
             <div className="absolute left-1/2 -translate-x-1/2 top-0 flex flex-col items-center">
               <div className="w-[2px] h-20 bg-black z-20"></div>
@@ -109,7 +109,7 @@ const DoorPage = () => {
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeInOut", delay: 1.65 }}
+            transition={{ duration: 0.5, ease: "easeInOut", delay: 2.05 }}
           ></motion.div>
 
           <motion.div
@@ -119,7 +119,7 @@ const DoorPage = () => {
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeInOut", delay: 1.65 }}
+            transition={{ duration: 0.5, ease: "easeInOut", delay: 2.05 }}
           ></motion.div>
         </motion.div>
       </section>

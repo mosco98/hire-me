@@ -33,20 +33,20 @@ const DoorPage = () => {
         style={{ perspective: 1000 }}
       >
         <motion.div className="max-w-4xl w-full" style={{ translateZ: -200 }}>
-          <h1 className="text-[2.5rem] md:text-7xl font-bold text-center left-10 leading-[48px] md:leading-[76px] text-white">
+          <h1 className="text-[2rem] md:text-7xl font-bold text-center left-10 leading-[44px] md:leading-[76px] text-white">
             Welcome to a new dispensation.
           </h1>
 
-          <p className="text-center text-xl md:max-w-xl mx-auto mt-5 font-normal text-[#c5c3c3] leading-8">
+          <p className="text-center text-base md:text-xl md:max-w-xl mx-auto mt-5 font-normal text-[#c5c3c3] md:leading-8">
             This coming month promises to be a good one with unimaginable
             opportunities. Are you ready?
           </p>
 
           <div className="flex items-center justify-center gap-4 mt-9 font-medium">
-            <button className="h-12 px-4 md:px-6 bg-[#A1662F] hover:bg-[#975e29] text-white rounded-md transition-all duration-100 ease-linear">
+            <button className="h-12 px-4 md:px-6 bg-[#A1662F] hover:bg-[#975e29] text-white rounded-md transition-all duration-100 ease-linear whitespace-nowrap">
               Get started
             </button>
-            <button className="h-12 px-4 md:px-6 text-white hover:text-[#A1662F] transition-all duration-100 ease-linear text-lg inline-flex items-center justify-center gap-2 group">
+            <button className="h-12 px-4 md:px-6 text-white hover:text-[#A1662F] transition-all duration-100 ease-linear text-lg inline-flex items-center justify-center gap-2 group whitespace-nowrap">
               Explore opportunities{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -131,7 +131,7 @@ const DoorPage = () => {
           }}
           className="text-transparent bg-clip-text"
         >
-          Have fun with it!
+          Rooting for you!
         </h1>
       </section>
     </motion.div>

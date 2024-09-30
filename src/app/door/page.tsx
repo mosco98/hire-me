@@ -94,7 +94,7 @@ const DoorPage = () => {
             style={{ translateZ: -1200, y: -80 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeInOut", delay: 1.5 }}
+            transition={{ duration: 0.5, ease: "easeInOut", delay: 1.6 }}
           >
             <div className="absolute left-1/2 -translate-x-1/2 top-0 flex flex-col items-center">
               <div className="w-[2px] h-20 bg-black z-20"></div>
@@ -109,17 +109,17 @@ const DoorPage = () => {
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeInOut", delay: 1.8 }}
+            transition={{ duration: 0.5, ease: "easeInOut", delay: 1.65 }}
           ></motion.div>
 
           <motion.div
-            className="absolute -inset-3 -bottom-4 blur-2xl -z-20 mix-blend-exclusion"
+            className="absolute -inset-10 -bottom-4 blur-2xl -z-20 mix-blend-exclusion"
             style={{
-              background: "radial-gradient(rgba(68, 68, 68, 0.36), #0a0a0a)"
+              background: "radial-gradient(rgba(68, 68, 68, 0.27), #0a0a0a)"
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeInOut", delay: 1.8 }}
+            transition={{ duration: 0.5, ease: "easeInOut", delay: 1.65 }}
           ></motion.div>
         </motion.div>
       </section>
